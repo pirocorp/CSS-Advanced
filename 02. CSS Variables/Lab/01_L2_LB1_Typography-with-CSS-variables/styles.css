@@ -1,0 +1,7 @@
+@import url('typography.css');
+
+body {
+    max-width: 70rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
