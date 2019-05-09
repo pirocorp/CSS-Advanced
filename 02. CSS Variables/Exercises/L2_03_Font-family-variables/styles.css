@@ -1,0 +1,14 @@
+@import url('reset.css');
+@import url('variables.css');
+@import url('layout.css');
+@import url('typography.css');
+
+body {
+    max-width: 60rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
