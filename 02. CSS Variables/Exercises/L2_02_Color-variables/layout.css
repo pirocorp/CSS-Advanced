@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+li {
+    list-style: none outside;
+}
+
+section {
+    padding: 2rem;
+    color: var(--primary-color);
+    border: 1px solid var(--alternative-color);
+}
+
+section ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+section ul > * {
+    flex: 0 0 30%;
+}

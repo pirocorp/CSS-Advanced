@@ -1,0 +1,67 @@
+/* Variables */
+/* Variables are scoped to element in which they are defined */
+/* Using :root pseude element make this variables global */
+:root {
+    --sizing-fs-base: 12px;
+    --sizing-ws-base: 1.5em;
+
+    --sizing-fs-tablets: 14px;
+    --sizing-fs-laptops: 32px;
+    --sizing-fs-desktop: 18px;    
+    --sizing-fs-hd: 20px;
+}
+
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/* Typography CSS */
+html {
+    font: var(--sizing-fs-base)/1.5 "Georgia", serif;
+}
+
+@media ( min-width: 600px ) {
+    html {
+        font-size: var(--sizing-fs-tablets);
+    }
+}
+
+@media ( min-width: 1260px ) {
+    html {
+        font-size: var(--sizing-fs-laptops);
+    }
+}
+
+@media ( min-width: 1440px ) {
+    html {
+        font-size: var(--sizing-fs-desktop);
+    }
+}
+
+@media ( min-width: 1660px ) {
+    html {
+        font-size: var(--sizing-fs-hd);
+    }
+}
+
+p, ul, ol, dl, table {
+    margin-bottom: var(--sizing-ws-base);
+}
+
+ul, ol {
+    padding-left: var(--sizing-ws-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 calc(var(--sizing-ws-base) / 3) 0;
+}
