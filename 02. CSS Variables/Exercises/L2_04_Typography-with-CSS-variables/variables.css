@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #275468;
+    --alternative-color: #FFC701;
+    --btn-font-color: #FFF;
+
+    --content-font: 'PT Sans';
+    --alternate-content-font: 'Georgia';
+    --heading-font: 'PT Serif';
+}
