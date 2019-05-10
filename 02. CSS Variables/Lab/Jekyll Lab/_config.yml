@@ -1,0 +1,28 @@
+# Site settings
+
+title: Jekyll Theme - Lazy
+email: pirocorp@abv.bg
+description: >- # this means to ignore newlines until "baseurl:"
+  It's minimal and lazy!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: pirocorp
+github_username:  pirocorp
+
+# Build settings
+markdown: kramdown
+theme: 
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
