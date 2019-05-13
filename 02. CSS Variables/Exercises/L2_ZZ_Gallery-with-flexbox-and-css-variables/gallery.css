@@ -1,0 +1,30 @@
+img {
+    position: absolute;
+    max-width: 100%;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    flex: var(--gallery-flex-item);
+    padding-top: 18.75%;
+    overflow: hidden;
+    margin-bottom: var(--gallery-flex-row-space);
+}
+
+.image-gallery::before,
+.image-gallery::after { 
+    flex: var(--gallery-flex-item);
+    display: block;
+    content: '';
+    order: 2000;
+}

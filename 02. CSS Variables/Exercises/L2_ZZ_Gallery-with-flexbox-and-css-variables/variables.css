@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #275468;
+    --alternative-color: #FFC701;
+    --btn-font-color: #FFF;
+
+    --content-font: 'PT Sans';
+    --alternate-content-font: 'Georgia';
+    --heading-font: 'PT Serif';
+
+    --gallery-flex-item: 0 0 32%;
+    --gallery-flex-row-space: 1rem;
+}
