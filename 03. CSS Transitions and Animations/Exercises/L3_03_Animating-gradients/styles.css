@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    border: 4rem solid #FFF;
+}
+
+.container::before, 
+.container::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.container::before {
+    background: linear-gradient(to right, #eb6109, #f28100, #f5a000, #f4be00, #f0dc05);
+    z-index: 1;
+}
+
+.container::after {
+    background: linear-gradient(to right, #3009eb, #3d4df4, #5b74f6, #8098f2, #a9b9e9);
+    z-index: 2;
+    transition: opacity 1s ease-out;
+}
+
+.container:hover:after {
+   opacity: 0;
+}
