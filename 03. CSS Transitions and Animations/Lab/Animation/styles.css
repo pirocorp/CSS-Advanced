@@ -1,0 +1,13 @@
+@import url('reset.css');
+@import url('animations.css');
+
+body {
+    max-width: 60rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+

@@ -1,0 +1,61 @@
+h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    /* color: red; */
+    background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+    animation: around-the-screen 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-timing-function: linear;
+}
+
+@keyframes slidein { 
+	from { 
+		transform: translateX(-100%); 
+		opacity: 0; 
+	} 
+
+	to { 
+		transform: translateX(10rem); 
+		opacity: 1; 
+	} 
+}
+
+@keyframes around-the-screen { 
+	0% {
+        top: 0;
+        left: 0;
+        transform: rotate(-0deg)
+    } 
+    
+    25% {
+        top: 0;
+        left: calc(100% - 5rem);
+        transform: rotate(-720deg);
+    }
+
+    50% {
+        top: calc(100% - 5rem);    
+        left: calc(100% - 5rem);  
+        transform: rotate(-1440deg)  
+    }
+
+	75% { 
+        top: calc(100% - 5rem);
+        left: 0;
+        transform: rotate(-2160deg)
+    } 
+    
+    100% {
+        transform: rotate(-2880deg);
+    }
+}
