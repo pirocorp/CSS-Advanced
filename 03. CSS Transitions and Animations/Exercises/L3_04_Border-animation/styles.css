@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #E8EAEE;
+}
+
+a {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: #2D2D2D;
+    background: #FFF;
+    outline: 5px solid #203F5D;
+    transition: outline 0.3s ease-out;
+}
+
+a + a {
+    margin-left: 0.5rem;
+}
+
+a:hover {
+    outline-width: 10px;
+}
