@@ -1,0 +1,123 @@
+//The comentar below will be copied in the css file wile this comentar wont
+/* Fancy documented CSS from SASS*/
+
+body {
+	padding: 2rem;
+}
+
+p {
+	padding-bottom: 1.5rem;
+}
+
+.site {
+	max-width: 40rem;
+	margin: 0 auto;
+	
+	//SASS Variable -> & gets parent selector
+	$containerName: &;
+	
+	// @at-root directive telss SASS not to include parent selector(s) in current nested selector */
+	@at-root {
+		#{&}-header {
+			border-bottom: 2px solid #000;
+			
+			//Using variable in interpolation
+			@at-root #{$containerName}-branding {
+				font-style: italic;
+			}
+
+			@at-root #{$containerName}-title {
+				font-size: 1.5rem;
+				padding-bottom: 0.2rem;
+				
+				&:after {
+					@extend %profit;
+				}
+			}
+		}
+
+		#{&}-footer {
+			border-top: 2px solid #000;
+			
+			&:after {
+				//Using placeholder
+				@extend %profit;
+			}
+		}
+	}
+}
+
+.hentry {
+	padding-top: 2rem;
+
+	a {
+		color: red;
+
+		&:hover {
+			background: #000;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	blockquote {
+		padding: 0 2rem 2rem 2rem;
+
+		p:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+//Defining Placeholder
+%profit {
+	display: inline-block;
+	font-style: normal;
+	content: '\1f911';
+}
+
+//Define variable
+$boxSize: 3rem;
+
+ul.boxes {
+	display: flex;
+	padding: 2rem;
+	
+	li {
+		display: block;
+		background: #000;
+		width: $boxSize;		
+		height: $boxSize;
+		margin:0 2rem 2rem 0;
+		animation: slideDown 0.3s 1 both;
+	}
+}
+
+@for $i from 1 through 10 {
+	ul.boxes li:nth-child(#{$i}) {
+		animation-delay: $i * 0.15s;
+	}
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translatey(-1 * $boxSize);
+	}
+	
+	to {
+		opacity: 1;
+		transform: translatey(0);
+	}
+}
+
+$colors: red, green, blue, pink, orange, orangered, yellowgreen, blueviolet;
+$ci: 1;
+
+@each $color in $colors {
+	ul.boxes li:nth-child(#{$ci}){
+		background: $color;
+    }
+    
+	$ci: $ci + 1;
+}
