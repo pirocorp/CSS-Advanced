@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  padding: 2rem; }
+
+.media-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center; }
+
+.media {
+  flex: 1 0 300px;
+  position: relative;
+  width: 300px;
+  background: #000;
+  border-radius: 0.5rem;
+  margin: 0 2rem 2rem 0; }
+
+.ratio-16x9:before {
+  display: block;
+  content: '';
+  padding-top: 56.25%; }
+.ratio-16x9:after {
+  display: flex;
+  content: "16x9";
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem; }
+
+.ratio-16x10:before {
+  display: block;
+  content: '';
+  padding-top: 62.5%; }
+.ratio-16x10:after {
+  display: flex;
+  content: "16x10";
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem; }
+
+.ratio-4x3:before {
+  display: block;
+  content: '';
+  padding-top: 75%; }
+.ratio-4x3:after {
+  display: flex;
+  content: "4x3";
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem; }
+
+.ratio-5x4:before {
+  display: block;
+  content: '';
+  padding-top: 80%; }
+.ratio-5x4:after {
+  display: flex;
+  content: "5x4";
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem; }
+
+.ratio-9x16:before {
+  display: block;
+  content: '';
+  padding-top: 177.7777777778%; }
+.ratio-9x16:after {
+  display: flex;
+  content: "9x16";
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem; }
+
+/*# sourceMappingURL=styles.css.map */

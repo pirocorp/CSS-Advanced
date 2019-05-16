@@ -1,0 +1,62 @@
+@import 'reset';
+
+body {
+    padding: 2rem;
+}
+
+.media-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+//(y/x)*100 -> gives us ratio
+@mixin responsive-ratio($x, $y) {
+    $padding: unquote(($y/$x)*100 + "%");
+
+    &:before {
+        display: block;
+        content: '';
+        padding-top: $padding; 
+    }
+
+    &:after {
+        display: flex;
+        content: "#{$x}x#{$y}";
+        color: #FFF;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        font-size: 2rem;
+    }
+}
+
+.media {
+    flex: 1 0 300px;
+    position: relative;
+    width: 300px;
+    background: #000;
+    border-radius: 0.5rem;
+    margin: 0 2rem 2rem 0;
+}
+
+.ratio-16x9 {  
+    @include responsive-ratio(16, 9);
+}
+
+.ratio-16x10 {  
+    @include responsive-ratio(16, 10);
+}
+
+.ratio-4x3 {  
+    @include responsive-ratio(4, 3);
+}
+
+.ratio-5x4 {  
+    @include responsive-ratio(5, 4);
+}
+
+.ratio-9x16 {  
+    @include responsive-ratio(9, 16);
+}
