@@ -1,0 +1,36 @@
+$itemSize: 5rem;
+
+body {
+    padding: $itemSize;
+}
+
+ul.items {
+    display: flex;
+
+    @at-root li {
+        list-style: none;
+        width: $itemSize;
+        height: $itemSize;
+        background: #000;
+        margin: 1rem;
+        animation: slideDown 0.3s ease-out 0s 1 both;
+    }
+
+    @for $i from 1 through 10 { 
+	@at-root li:nth-child(#{$i}) { animation-delay: $i * 0.15s } 
+}
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-$itemSize);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+
