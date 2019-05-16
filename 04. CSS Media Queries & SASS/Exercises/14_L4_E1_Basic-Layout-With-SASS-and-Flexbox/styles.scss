@@ -1,0 +1,100 @@
+@import 'reset';
+
+$boxPadding: 2rem;
+$borderSeparator: 2px solid #000;
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+
+    @media screen and (min-width: 600px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 800px) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 20px;
+    }
+}
+
+
+
+body {
+    background: #EEEEEE;
+}
+
+.site {
+    max-width: 50rem;
+    margin: 0 auto;
+
+    @at-root {
+        #{&}-header {
+            border-bottom: $borderSeparator;
+            padding: $boxPadding;
+        }
+
+        #{&}-branding {
+            
+        }
+
+        #{&}-title {
+            font-size: 2em;
+            letter-spacing: 0.1em;
+        }
+
+        #{&}-description {
+            font-style: italic;
+        }
+
+        #{&}-content-wrapper {            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media screen and (min-width: 600px) {
+                padding: $boxPadding;
+            }
+        }
+
+        #{&}-content {
+            flex: 3 1 30rem;
+            padding: $boxPadding;
+
+            * + * {
+                margin-top: 1rem;
+            }
+
+        }
+
+        #{&}-sidebar {
+            flex: 1 0 10rem;
+            padding: $boxPadding;
+
+            ul {
+
+            }
+
+            li {
+                list-style-type: circle;
+                list-style-position: inside;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        #{&}-footer {
+            border-top: $borderSeparator;
+            padding: $boxPadding;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px; }
+  @media screen and (min-width: 600px) {
+    html {
+      font-size: 14px; } }
+  @media screen and (min-width: 800px) {
+    html {
+      font-size: 16px; } }
+  @media screen and (min-width: 1024px) {
+    html {
+      font-size: 18px; } }
+  @media screen and (min-width: 1440px) {
+    html {
+      font-size: 20px; } }
+
+body {
+  background: #EEEEEE; }
+
+.site {
+  max-width: 50rem;
+  margin: 0 auto; }
+  .site-header {
+    border-bottom: 2px solid #000;
+    padding: 2rem; }
+
+  .site-title {
+    font-size: 2em;
+    letter-spacing: 0.1em; }
+
+  .site-description {
+    font-style: italic; }
+
+  .site-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    @media screen and (min-width: 600px) {
+      .site-content-wrapper {
+        padding: 2rem; } }
+
+  .site-content {
+    flex: 3 1 30rem;
+    padding: 2rem; }
+    .site-content * + * {
+      margin-top: 1rem; }
+
+  .site-sidebar {
+    flex: 1 0 10rem;
+    padding: 2rem; }
+    .site-sidebar li {
+      list-style-type: circle;
+      list-style-position: inside; }
+    .site-sidebar a {
+      text-decoration: none;
+      color: #000; }
+
+  .site-footer {
+    border-top: 2px solid #000;
+    padding: 2rem; }
+
+/*# sourceMappingURL=styles.css.map */
