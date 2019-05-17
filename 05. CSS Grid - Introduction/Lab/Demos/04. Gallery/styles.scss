@@ -1,0 +1,43 @@
+body {
+    background: #EEE;
+    padding: 2rem;
+    margin: 0;
+    font-size: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    grid-auto-flow: dense;
+
+/*     justify-items: center;
+    align-items: center; */
+
+    grid-gap: 1rem;
+}
+
+.item {
+    background: #CCC;
+    overflow: hidden;    
+}
+
+.item.landscape {
+    grid-column-start: span 2;
+}
+
+.item.portrait {
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
+
+.item.portrait img {
+    height: 100%;
+    /* width: auto; */
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
