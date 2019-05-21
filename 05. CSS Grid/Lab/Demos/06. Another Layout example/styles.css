@@ -1,0 +1,49 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "hd hd hd hd hd hd hd hd" "e1 e1 e1 e1 e1 e1 e2 e2" "e3 e3 e4 e4 e4 e4 e4 e4" "e5 e5 e5 e6 e6 e7 e7 e7";
+  padding: 2rem;
+  margin: 0;
+  background: #EEE; }
+
+header, section {
+  background: #FFF;
+  padding: 0.5rem;
+  outline: 1px solid #000; }
+
+body > header {
+  grid-area: hd; }
+
+.e1 {
+  grid-area: e1; }
+
+.e2 {
+  grid-area: e2; }
+
+.e3 {
+  grid-area: e3; }
+
+.e4 {
+  grid-area: e4; }
+
+.e5 {
+  grid-area: e5; }
+
+.e6 {
+  grid-area: e6; }
+
+.e7 {
+  grid-area: e7; }
+
+/*# sourceMappingURL=styles.css.map */

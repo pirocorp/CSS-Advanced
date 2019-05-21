@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+/* Typography */
+html {
+  font: 12px / 1.5 Georgia, serif; }
+
+body, table, input, select {
+  font: inherit; }
+
+@media (min-width: 600px) {
+  html {
+    font-size: 14px; } }
+@media (min-width: 900px) {
+  html {
+    font-size: 16px; } }
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px; } }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  line-height: 1.1; }
+
+h1 {
+  font-size: 2.2rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 1.6rem; }
+
+h4 {
+  font-size: 1.4rem; }
+
+h5 {
+  font-size: 1.2rem; }
+
+h6 {
+  font-size: 1rem; }
+
+/* Layout */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* justify-content: center; */
+  grid-template-areas: "hd" "ct" "sp" "ss" "ft";
+  padding: 2rem;
+  background: #EEE;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+@media (min-width: 800px) {
+  body {
+    grid-template-columns: repeat(6, minmax(90px, 1fr));
+    grid-template-rows: auto 20vh repeat(3, auto);
+    /* justify-content: center; */
+    grid-template-areas: "hd hd hd hd hd hd" "s1 s1 s2 s2 s3 s3" "xx xx xx xx xx xx" "sp ct ct ct ct ss" "ft ft ft ft ft ft"; } }
+@media (max-width: 800px) {
+  body > section,
+  body > .banner {
+    display: none; } }
+body > * {
+  padding: 1rem;
+  /* background: #FFF; */
+  /* outline: 1px solid #000; */ }
+
+body > header {
+  /* grid-column: 1 / -1; */
+  grid-area: hd; }
+
+body > footer {
+  grid-area: ft; }
+
+body > section:nth-of-type(1) {
+  grid-area: s1; }
+
+body > section:nth-of-type(2) {
+  grid-area: s2; }
+
+body > section:nth-of-type(3) {
+  grid-area: s3; }
+
+body > .banner {
+  grid-area: xx; }
+
+body > main {
+  grid-area: ct; }
+
+body > aside.primary {
+  grid-area: sp; }
+
+body > aside.secondary {
+  grid-area: ss; }
+
+/* General Styles */
+ul {
+  list-style: none outside; }
+
+/* Navigation */
+body > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+body > header h1 {
+  padding-bottom: 0; }
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; }
+
+nav ul li + li {
+  margin-left: 1rem; }
+
+/*# sourceMappingURL=styles.css.map */
