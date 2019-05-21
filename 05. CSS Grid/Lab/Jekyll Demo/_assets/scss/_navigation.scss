@@ -1,0 +1,200 @@
+nav {
+    
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    & > ul {
+        display: flex;
+
+        @include bp('tablet') {
+            flex-direction: column;
+        }
+    }
+
+    li {
+        display: block;
+        list-style: none outside; 
+        position: relative;  
+
+        @include bp('laptop') {
+            padding: 0 0.5em;
+        }
+    }
+
+
+}
+
+/*
+ * Header Navigation styling
+ */
+
+.header-nav {
+    margin-right: auto;
+    padding-left: 2rem;
+
+    li {
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        color: #FFF;
+        background: rgba(0,0,0,0.5);
+        transition: background 0.3s ease-in;
+        outline: none;
+
+        @include bp('laptop') {
+            border-radius: 0.3em;
+        }
+    }
+
+    li.current-page > a,
+    a:focus,
+    a:hover {
+        background: #900;
+    }
+
+    a:focus {
+        text-decoration: underline;
+    }
+
+    /* Level 2 - only for larger devices */
+
+    @include bp('laptop') {
+
+        & > ul ul li {
+            opacity: 0;
+            transform: translateY(-2rem);
+            transition: opacity 0.2s ease-in, transform 0.2s ease-out;
+            padding-top: 0.5em;
+        }
+
+        & > ul ul {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 100;
+            pointer-events: none;
+            border-bottom-left-radius: 0.3em;
+            border-bottom-right-radius: 0.3em;
+            overflow: hidden;
+        }
+
+        li:hover > ul {
+            pointer-events: all;
+        }
+        
+        li:hover > ul > li {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        li:hover > ul > li:nth-child(2) { transition-delay: 0.08s; }
+        li:hover > ul > li:nth-child(3) { transition-delay: 0.16s; }
+        li:hover > ul > li:nth-child(4) { transition-delay: 0.24s; }
+        li:hover > ul > li:nth-child(5) { transition-delay: 0.32s; }
+
+        & > ul ul a {
+            padding: 1em 2.5em 1em 1em;
+        }
+    }
+
+    /* Hide show entire Nav element for different devices */
+
+    @include bp('tablet') {
+        width: 100%;
+        height: 100vh;
+        padding: 12rem;
+        position: fixed;
+        top: 0; left: 0;
+        background: rgba(black, 0.8);
+
+        ul ul li a {
+            padding-left: 3rem;
+        }
+
+        @at-root #toggle-main-nav + .site-header & {
+            display: none;
+        }
+
+        @at-root #toggle-main-nav:checked + .site-header & {
+            display: block;
+            z-index: 2000;
+        }
+
+        @at-root #toggle-main-nav:checked + .site-header {
+
+            .site-title {
+                position: relative;
+                z-index: 9000;
+                pointer-events: none;
+            }
+
+            #toggle-main-nav-button {
+                position: fixed;
+                z-index: 9000;
+                top: 1rem;
+                right: 2rem;
+
+                &:before {
+                    content: '\f00d';
+                }
+            }
+
+        }
+
+        @at-root .site-header .button {
+            margin-top: 2rem;
+        }
+    }
+}
+
+#toggle-main-nav-button {
+    color: #FFF;
+    padding: 1rem 2rem;
+    background: rgba(black, 0.2);
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    &:before {
+        display: inline-block;
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    @include bp('tablet') { display: block; }
+    @include bp('laptop') { display: none; }
+
+    span {
+        display: none;
+    }
+}
+
+
+#toggle-main-nav {
+    position: absolute;
+    opacity: 0; 
+    pointer-events: none;
+}
+
+/*
+ * Footer Navigation styling
+ */
+.footer-nav {
+    padding-bottom: 2rem;
+}
+
+.footer-nav + .button {
+    display: none;
+}
+
+.footer-nav ul ul {
+    display: none;
+}

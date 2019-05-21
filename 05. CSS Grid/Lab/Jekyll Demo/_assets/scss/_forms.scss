@@ -1,0 +1,34 @@
+form {
+    background: #EEE;
+    padding: 3rem 4rem;
+    border-radius: 0.5em;
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        display: block;
+        border: 2px solid #CCC;
+        border-radius: 0.3em;
+        padding: 0.5rem 0.8rem;
+        outline: none;
+        width: 100%;
+
+        &:focus {
+            border-color: #900;
+        }
+    }
+
+    input[type="submit"] {
+        width: auto;
+        background: #900;
+        color: #FFF;
+        border-color: #900;
+        font-weight: bold;
+        padding: 1rem 1.8rem;
+        font-size: 1em;
+    }
+}

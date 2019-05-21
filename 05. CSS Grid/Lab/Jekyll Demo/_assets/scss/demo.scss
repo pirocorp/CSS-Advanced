@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.site {
+    padding: 2rem;
+
+    &-header {
+        display: block;
+
+        .page-contacts & {
+            background: blue;
+        }
+
+        @include bp('tablet') { display: block; }
+        @include bp('phone') { display: block; }
+    }
+
+    &-footer {
+        display: block;
+        font-weight: normal;
+    }
+
+}
