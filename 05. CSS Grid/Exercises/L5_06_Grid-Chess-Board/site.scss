@@ -1,0 +1,24 @@
+@import "reset";
+
+$base-box-size: 4rem;
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, $base-box-size);
+    grid-gap: 0.5rem;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+}
+
+div {
+    width: $base-box-size;
+    height: $base-box-size;
+    border: 1px solid #000;
+    border-radius: 0.3em;
+}
+
+div:nth-child(odd) {
+    background: #000;
+}

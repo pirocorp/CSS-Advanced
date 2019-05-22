@@ -1,0 +1,30 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 4rem);
+  grid-gap: 0.5rem;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem; }
+
+div {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  border-radius: 0.3em; }
+
+div:nth-child(odd) {
+  background: #000; }
+
+/*# sourceMappingURL=styles.css.map */
