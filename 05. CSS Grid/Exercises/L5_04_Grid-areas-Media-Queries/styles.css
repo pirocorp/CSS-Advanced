@@ -1,0 +1,40 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "hd" "mc" "sb" "ft";
+  grid-gap: 0.5rem;
+  padding: 2rem; }
+
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: "hd hd" "mc sb" "ft ft"; } }
+body > * {
+  padding: 1rem;
+  color: #FFF;
+  background: #000; }
+
+body > header {
+  grid-area: hd; }
+
+body > main {
+  grid-area: mc; }
+
+body > aside {
+  grid-area: sb; }
+
+body > footer {
+  grid-area: ft; }
+
+/*# sourceMappingURL=styles.css.map */
