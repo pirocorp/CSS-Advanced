@@ -1,0 +1,44 @@
+@import "reset";
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    padding: 10rem;
+}
+
+@media (min-width: 800px) {
+    body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.box:after {
+    display: block;
+    content: "";
+    padding-top: 100%;
+}
+
+.box img {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    object-fit: cover;    
+    transform: scale(1);
+}
+
+.box:nth-of-type(2n) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
