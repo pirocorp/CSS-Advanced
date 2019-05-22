@@ -1,0 +1,36 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-gap: 0.5rem;
+  grid-template-areas: "hd hd" "mc sb" "ft ft";
+  padding: 2rem; }
+
+body > * {
+  padding: 1rem;
+  color: #FFF;
+  background: #000; }
+
+body > header {
+  grid-area: hd; }
+
+body > main {
+  grid-area: mc; }
+
+body > aside {
+  grid-area: sb; }
+
+body > footer {
+  grid-area: ft; }
+
+/*# sourceMappingURL=styles.css.map */
