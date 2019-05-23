@@ -1,0 +1,22 @@
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid transparent;
+    border-radius: 0.3rem;
+
+    &-primary {
+        color: #FFF;
+        background: $color-button-primary;
+        border-color: $color-button-primary;
+    }
+
+    &-primary-white:hover {
+        color: #0F1F36;
+    }
+}
+
+.button:hover {
+    background: transparent;
+}

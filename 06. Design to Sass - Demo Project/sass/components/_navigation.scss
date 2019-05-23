@@ -1,0 +1,26 @@
+.site-navigation {
+    margin-right: auto;
+
+    ul {
+        display: flex;        
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                padding:  0.75em;
+                color: #919696;
+            }
+        }
+
+        li:nth-of-type(1) a {
+            color: #202C2E;
+        }
+
+        li a:hover {
+            color: $color-circle;
+            border-bottom: 2px solid $color-circle;
+        }
+    }
+}

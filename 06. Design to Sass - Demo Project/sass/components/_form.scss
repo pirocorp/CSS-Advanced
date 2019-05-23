@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem 0;
+    background: #000;
+
+    input {
+        outline: none;
+        border: none;
+        width: 15rem;
+        border-radius: 0.3rem;
+        padding-left: 1rem;
+        margin-right: 1rem;
+        background: #0E1D33;
+        font-size: 1.1em;
+        color: #FFF;
+    }
+}

@@ -1,0 +1,270 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext");
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+html {
+  font: 12px / 1.5 "PT Sans", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-family: "PT Serif", serif; }
+
+h1 {
+  font-size: 2.8rem; }
+
+h2 {
+  font-size: 2.6rem; }
+
+h3 {
+  font-size: 2.4rem; }
+
+h4 {
+  font-size: 2.2rem; }
+
+h5 {
+  font-size: 2rem; }
+
+h6 {
+  font-size: 1.8rem; }
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 14px; } }
+@media screen and (min-width: 110px) {
+  html {
+    font-size: 16px; } }
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 18px; } }
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 24px; } }
+.banner:after, .banner:before {
+  display: block;
+  content: '';
+  position: absolute; }
+
+.gallery ul li .gallery-list .image-container:before {
+  display: block;
+  content: ''; }
+
+.banner:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.site-logo {
+  width: 8rem;
+  height: auto;
+  margin-right: 4rem;
+  margin-top: 0.5rem; }
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid transparent;
+  border-radius: 0.3rem; }
+  .button-primary {
+    color: #FFF;
+    background: #2C70ED;
+    border-color: #2C70ED; }
+  .button-primary-white:hover {
+    color: #0F1F36; }
+
+.button:hover {
+  background: transparent; }
+
+.site-navigation {
+  margin-right: auto; }
+  .site-navigation ul {
+    display: flex; }
+    .site-navigation ul li {
+      list-style: none; }
+      .site-navigation ul li a {
+        text-decoration: none;
+        padding: 0.75em;
+        color: #919696; }
+    .site-navigation ul li:nth-of-type(1) a {
+      color: #202C2E; }
+    .site-navigation ul li a:hover {
+      color: #FFA500;
+      border-bottom: 2px solid #FFA500; }
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem 0;
+  background: #000; }
+  .form input {
+    outline: none;
+    border: none;
+    width: 15rem;
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    background: #0E1D33;
+    font-size: 1.1em;
+    color: #FFF; }
+
+body {
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  color: #575D6B; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 1rem 10%;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  z-index: 100; }
+
+.site-footer {
+  text-align: center;
+  padding: 1rem 10%;
+  background: #102039; }
+
+.banner {
+  /* No Repeat Cnter by X and Y */
+  background: url("../images/adv-section-info.jpg") no-repeat center center;
+  padding: 10rem 0;
+  text-align: center;
+  position: relative; }
+  .banner:after {
+    background: rgba(0, 0, 0, 0.6); }
+  .banner:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 50px solid #FFA500;
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    z-index: 5; }
+  .banner h1 {
+    font-size: 4rem;
+    color: #FFF;
+    width: 35rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0px 0px 5px #000000; }
+
+.logo-line {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25); */ }
+  .logo-line img {
+    display: block;
+    width: auto;
+    height: 4rem; }
+
+.location {
+  padding-top: 5rem; }
+  .location h2 {
+    text-align: center;
+    width: 40rem;
+    margin: 0 auto;
+    padding-bottom: 5rem; }
+  .location img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 0px #575D6B; }
+
+/* I will try to make it with Grid Later if i have time */
+.gallery {
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 10%;
+  background: #EEE; }
+  .gallery > p {
+    padding-bottom: 2rem; }
+  .gallery ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .gallery ul li {
+      list-style: none;
+      flex: 1 1 60%;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 0 5px 0px #575D6B;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      background: #FFF; }
+      .gallery ul li .gallery-list {
+        width: 40%; }
+        .gallery ul li .gallery-list .image-container {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          height: 100%; }
+          .gallery ul li .gallery-list .image-container:before {
+            padding-top: 100%; }
+          .gallery ul li .gallery-list .image-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto; }
+          .gallery ul li .gallery-list .image-container .portrait {
+            width: auto;
+            height: 100%; }
+      .gallery ul li .text-container {
+        text-align: left;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; }
+        .gallery ul li .text-container img {
+          width: 3rem; }
+    .gallery ul .full-size {
+      flex: 1 1 30%;
+      padding: 0; }
+      .gallery ul .full-size .gallery-list {
+        flex-grow: 1; }
+
+.more-info {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 5rem 10%; }
+  .more-info > * {
+    flex: 0 0 40%; }
+  .more-info img {
+    width: 100%;
+    height: auto; }
+  .more-info h2 {
+    margin-bottom: 5rem; }
+
+.trial-form {
+  text-align: center;
+  padding: 5rem 10%;
+  background: #27364B; }
+  .trial-form h2 {
+    color: #FFF;
+    margin-bottom: 2rem; }
+  .trial-form .form {
+    background: inherit; }
+
+/*# sourceMappingURL=styles.css.map */
